@@ -1,0 +1,17 @@
+﻿@model IQueryable<string>
+
+<a class= "btn btn-group btn-outline-secondary"
+	asp-action="Index"
+	asp-controller = "Home"
+	asp-route-category = "">Home</a>
+
+@foreach(string category in Model)
+{
+	<a class = "btn btn-gourp btn-outline-secondary"
+		asp-action = "Index"
+		asp-controller = "Home"
+		asp-route-category = "@category"
+		asp-route-book_p = "1">@category</a>
+}
+
+

@@ -1,0 +1,13 @@
+﻿@model BookStoreListViewModel
+<h2>Welcome to My Book Store</h2>
+
+@foreach (var b in Model.Books){
+	@await Html.PartialAsync("_BSPartial", b);
+}
+
+
+<div page-model= "@Model.PageInformation" page-action = "Index"
+	page-classes-enabled = "true" page-class= "btn" page-class-normal="btn-outline-dark"\
+	page-class-selected = "btn-primary" class="btn-group pull-right m-1"
+	page-url-category = "@Model.CurrentCategory"
+></div>
